@@ -7,10 +7,9 @@ app = Flask(__name__) # creates a new Flask app or a new Flask object, and it gi
 def render_html_template():
     return render_template("first_pg.html")
 
-@app.route("/second")
-def render_second_template():
-    return render_template("second_pg.html")
-
+@app.route("/jinja")
+def render_jinja_pg():
+    return render_template("jinja_intro.html", name="Habibi Malla", template_name="jinja2") #template_name="Django"
 
 @app.route("/hello_world")
 def hello_world():
