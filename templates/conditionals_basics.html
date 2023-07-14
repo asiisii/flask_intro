@@ -16,6 +16,7 @@
     <li>iPad</li>
     <li>iMac</li>
   </ul>
+
   {% elif company == "Microsoft" %}
   <h3>Available Microsoft products</h3>
   <ul>
@@ -23,6 +24,9 @@
     <li>Surface Pro</li>
     <li>Surface Book</li>
   </ul>
+
+  {% else %}
+  <p>No {{ company }} products available</p>
   {% endif %}
 </body>
 </html>
