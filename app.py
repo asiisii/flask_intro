@@ -39,6 +39,20 @@ def render_expressions():
     }
     return render_template("expressions.html", **kwargs)
 
+
+@app.route("/data-structures/")
+def render_data_structures():
+    movies = [
+        "Interstallar",
+        "Krish",
+        "Kathmandu"
+    ]
+    return render_template("data_structures.html", movies=movies)
+
+
+
+
+
 @app.route("/hello_world")
 def hello_world():
     return "Hello, world!"
