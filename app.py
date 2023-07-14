@@ -75,6 +75,14 @@ def render_conditionals():
     company = "Apple"
     return render_template("conditionals_basics.html", company=company)
 
+@app.route("/for-loops")
+def render_for_loops():
+    planets = [
+        "Mercury", "Venus", "Eart", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune",
+    ]
+    return render_template("for_loop.html", planets=planets)
+
+
 @app.route("/hello_world")
 def hello_world():
     return "Hello, world!"
