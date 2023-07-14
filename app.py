@@ -70,7 +70,10 @@ def render_data_structures():
     return render_template("data_structures.html", **kwargs)
 
 
-
+@app.route("/conditionals")
+def render_conditionals():
+    company = "Apple"
+    return render_template("conditionals_basics.html", company=company)
 
 @app.route("/hello_world")
 def hello_world():
