@@ -3,6 +3,14 @@ from flask import Flask, render_template
 app = Flask(__name__) # creates a new Flask app or a new Flask object, and it gives it a name that is unique
 # dunder name is always unique in Python
 
+class GalilieanMoons:
+    def __init__(self, first, second, third, fourth):
+        self.first = first
+        self.second = second
+        self.third = third
+        self.fourth = fourth
+        
+
 @app.route("/")
 def render_html_template():
     return render_template("first_pg.html")
@@ -47,8 +55,19 @@ def render_data_structures():
         "Krish",
         "Kathmandu"
     ]
-    return render_template("data_structures.html", movies=movies)
-
+    car = {
+        "brand": "tesla",
+        "model": "beast",
+        "year": 2023
+    }
+    moons = GalilieanMoons("Io", "Europa", "Ganymede", "Callisto")
+    
+    kwargs = {
+        "movies": movies,
+        "car": car,
+        "moons": moons
+    }
+    return render_template("data_structures.html", **kwargs)
 
 
 
