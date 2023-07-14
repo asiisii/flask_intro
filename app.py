@@ -82,6 +82,15 @@ def render_for_loops():
     ]
     return render_template("for_loop.html", planets=planets)
 
+@app.route("/loops-and-conditionals")
+def render_loops_and_conditionals():
+    user_os = {
+        "Habibi": "Windows",
+        "Puku": "MacOs",
+        "Yogi": "Linux",
+        "Mutu": "Ubuntu"
+    }
+    return render_template("loops_and_conditionals.html", user_os=user_os)
 
 @app.route("/hello_world")
 def hello_world():
